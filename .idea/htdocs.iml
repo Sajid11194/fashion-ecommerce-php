@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="WEB_MODULE" version="4">
+  <component name="NewModuleRootManager">
+    <content url="file://$MODULE_DIR$">
+      <sourceFolder url="file://$MODULE_DIR$/New folder/wp-content/plugins" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/New folder/wp-content/plugins/elementor-pro" isTestSource="false" packagePrefix="ElementorPro" />
+      <sourceFolder url="file://$MODULE_DIR$/New folder/wp-content/plugins/elementor/includes" isTestSource="false" packagePrefix="Elementor" />
+      <sourceFolder url="file://$MODULE_DIR$/New folder/wp-content/plugins/elementskit-lite" isTestSource="false" packagePrefix="ElementsKit_Lite" />
+      <sourceFolder url="file://$MODULE_DIR$/New folder/wp-content/plugins/elementskit-lite/helpers" isTestSource="false" packagePrefix="ElementsKit_Lite" />
+      <sourceFolder url="file://$MODULE_DIR$/New folder/wp-content/plugins/revslider/includes" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/New folder/wp-content/plugins/wpforms-lite/src" isTestSource="false" packagePrefix="WPForms" />
+      <sourceFolder url="file://$MODULE_DIR$/New folder/wp-includes" isTestSource="false" packagePrefix="PHPMailer" />
+      <excludeFolder url="file://$MODULE_DIR$/.tmp" />
+      <excludeFolder url="file://$MODULE_DIR$/temp" />
+      <excludeFolder url="file://$MODULE_DIR$/tmp" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+  </component>
+</module>

@@ -1,0 +1,20 @@
+.product__heading {
+  font-weight: 700;
+}
+.product__price {
+  color: #3a3939;
+  font-weight: 600;
+}
+.product__short-info {
+  color: #3a3939;
+  font-weight: 400;
+}
+.product__feature {
+  margin: 10px 0px;
+}
+.product__feature__title {
+  color: #3a3939;
+  font-weight: 600;
+}
+
+/*# sourceMappingURL=product.css.map */
