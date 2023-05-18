@@ -27,7 +27,9 @@ body {
   font-family: 'Italiana', serif;
 }
 
-
+.box{
+  box-shadow: 0 0 10px 5px whitesmoke;
+}
 .heading-small{
   font-size: 22px;
   font-weight: 700;
@@ -216,3 +218,60 @@ body {
   }
 }
 
+.cart{
+  &__item{
+    border: 1px solid #e3e2e2;
+    padding: 10px 0px;
+    &__features{
+      padding: 0px 15px;
+    }
+    &__title{
+      color: #3a3939;
+      font-weight: 600;
+    }
+    &__image{
+      height:150px;
+      width:auto;
+    }
+    &__name{
+      font-size: 24px;
+      display: block;
+    }
+  }
+
+  &__summary{
+    padding: 5px 15px;
+    border: 1px solid #e3e2e2;
+
+  }
+
+}.form{
+   box-shadow: 0 0 10px 5px whitesmoke;
+   border-radius: 7px;
+   width: 500px;
+   margin: auto auto;
+   padding: 30px;
+   &__title{
+     margin: 30px 0px;
+   }
+   &__input{
+     width: 100%;
+     border: 1px solid #ccc8c8;
+     margin: 10px 0;
+     padding: 10px 10px;
+   }
+   &__checkbox__label{
+     margin: 0px 5px;
+   }
+ }
+
+.order{
+  &__item{
+    margin: 15px 0px;
+    box-shadow: 0 0 10px 5px whitesmoke;
+    &__title{
+      color: #3a3939;
+      font-weight: 600;
+    }
+  }
+}

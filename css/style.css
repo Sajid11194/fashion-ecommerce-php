@@ -1,21 +1,8 @@
-.banner {
-  height: 600px;
-  display: flex;
-  justify-content: start;
-  align-items: center;
-}
 .banner--1 {
-  background: url("../../img/bn1.png") right no-repeat, linear-gradient(to right, #cacacc, #FAF9F6, #cacacc);
-}
-.banner--2 {
-  background: url("../../img/bn1.png") right no-repeat, linear-gradient(to right, #cacacc, #FAF9F6, #cacacc);
-}
-.banner--3 {
-  background: url("../../img/bn1.png") right no-repeat, linear-gradient(to right, #cacacc, #FAF9F6, #cacacc);
+  background-color: #fbf3f3;
 }
 .banner__content {
   color: black;
-  width: 600px;
 }
 .banner__content__heading {
   font-weight: 700;
@@ -24,17 +11,6 @@
 .banner__content__text {
   margin: 30px 0px;
   color: #4b4b4c;
-  text-transform: capitalize;
-}
-.banner__content__btn {
-  padding: 12px 20px;
-  background-color: #ce0f47;
-  border: 1px solid transparent;
-  border-radius: 5px;
-  color: white;
-}
-.banner__content__btn:hover {
-  background-color: #4b4b4c;
 }
 
 @media screen and (max-width: 564px) {
@@ -86,26 +62,6 @@
   padding: 5px 10px;
 }
 
-.form {
-  box-shadow: 0 0 10px 5px whitesmoke;
-  border-radius: 7px;
-  width: 500px;
-  margin: auto auto;
-  padding: 30px;
-}
-.form__title {
-  margin: 30px 0px;
-}
-.form__input {
-  width: 100%;
-  border: 1px solid #ccc8c8;
-  margin: 10px 0;
-  padding: 10px 10px;
-}
-.form__checkbox__label {
-  margin: 0px 5px;
-}
-
 * {
   margin: 0px;
   padding: 0px;
@@ -126,6 +82,10 @@ body {
   font-weight: 700;
   display: block;
   font-family: "Italiana", serif;
+}
+
+.box {
+  box-shadow: 0 0 10px 5px whitesmoke;
 }
 
 .heading-small {
@@ -299,6 +259,59 @@ body {
   background-color: #FAF9F6;
   color: #ce0f47;
   letter-spacing: 2px;
+}
+
+.cart__item {
+  border: 1px solid #e3e2e2;
+  padding: 10px 0px;
+}
+.cart__item__features {
+  padding: 0px 15px;
+}
+.cart__item__title {
+  color: #3a3939;
+  font-weight: 600;
+}
+.cart__item__image {
+  height: 150px;
+  width: auto;
+}
+.cart__item__name {
+  font-size: 24px;
+  display: block;
+}
+.cart__summary {
+  padding: 5px 15px;
+  border: 1px solid #e3e2e2;
+}
+
+.form {
+  box-shadow: 0 0 10px 5px whitesmoke;
+  border-radius: 7px;
+  width: 500px;
+  margin: auto auto;
+  padding: 30px;
+}
+.form__title {
+  margin: 30px 0px;
+}
+.form__input {
+  width: 100%;
+  border: 1px solid #ccc8c8;
+  margin: 10px 0;
+  padding: 10px 10px;
+}
+.form__checkbox__label {
+  margin: 0px 5px;
+}
+
+.order__item {
+  margin: 15px 0px;
+  box-shadow: 0 0 10px 5px whitesmoke;
+}
+.order__item__title {
+  color: #3a3939;
+  font-weight: 600;
 }
 
 /*# sourceMappingURL=style.css.map */

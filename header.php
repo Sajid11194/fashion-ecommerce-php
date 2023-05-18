@@ -29,11 +29,9 @@ require("functions.php");
         <button class="btn"><i class="lni lni-search-alt"></i></button>
     </form>
     <div class="nav__menu">
-        <div class="nav__menu__item"><i class="lni lni-heart"></i>
-            <span  class="nav__menu__item__name">Wish List</span></div>
-        <div class="nav__menu__item"><i class="lni lni-cart"></i>
-            <span  class="nav__menu__item__name">My Cart</span></div>
-        <div class="nav__menu__item"><a href="/login.php"><i class="lni lni-user"></i>
+        <div class="nav__menu__item"><a href="/cart.php"><i class="lni lni-cart"></i>
+                <span  class="nav__menu__item__name">My Cart</span></a></div>
+        <div class="nav__menu__item"><a href="/dashboard.php"><i class="lni lni-user"></i>
                 <span class="nav__menu__item__name">My Account</span></a></div>
         <?php
         if(isset($_SESSION["user_id"])){

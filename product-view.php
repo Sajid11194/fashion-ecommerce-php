@@ -4,7 +4,7 @@ require("header.php");
 
 <?php
 if (isset($_GET["id"])) {
-    $product = fetch_product_by_id($_GET["id"]);
+    $product = get_product_by_id($_GET["id"]);
     if(!$product){
         echo "404 Page";
         header("Location: 404.php");
@@ -17,14 +17,13 @@ if (isset($_POST["product_id"])) {
     $quantity=$_POST["quantity"];
     $cart=array("product_id"=>$product_id,"color"=>$color,"size"=>$size,"quantity"=>$quantity);
     array_push($_SESSION["cart"], $cart);
-    header("Location: index.php");
 }
 ?>
 
 <div class="container my-5">
     <div class="row">
         <div class="col-12 col-lg-6">
-            <img class="img-fluid" src="./img/product2.jpg"/>
+            <img class="img-fluid h-100 ms-5" src="./img/<?php echo $product['image']; ?>"/>
         </div>
         <div class="col-12 col-lg-6">
             <div class="product">
