@@ -36,7 +36,7 @@ if (count($cart_products)) {
             <div class="col-md-8">';
      foreach ($cart_products as $item) {
             echo '
-            <div class="row cart__item">
+            <div class="cart__item">
                 <div class="d-flex">
                     <img class="img-fluid cart__item__image float-start" src="./img/'.$item["image"].'">
                     <div class="cart__item__features flex-grow-1">
@@ -48,7 +48,7 @@ if (count($cart_products)) {
                             </div>
                             <div>
                                 <div class="my-2"><span class="cart__item__title">Quantity: </span><span>'.$item["quantity"].'</span></div>
-                                <div class="my-2"><span class="cart__item__title">Price: </span><span>Tk '.$item["price"].'</span></div>
+                                <div class="my-2"><span class="cart__item__title">Price: </span><span>৳ '.$item["price"].'</span></div>
                             </div>
                         </div>
                     </div>
@@ -61,7 +61,7 @@ if (count($cart_products)) {
             <div class="col-md-4">
                 <div class="cart__summary">
                     <div class="d-flex justify-content-between"><span class="cart__item__title">Price: </span>
-                        <span>Tk ';
+                        <span>৳ ';
 
     $price = 0;
     foreach ($cart_products as $item) {
@@ -70,10 +70,10 @@ if (count($cart_products)) {
     echo $price;
     echo '</span></div>
                     <div class="d-flex justify-content-between"><span class="cart__item__title">Tax: </span>
-                        <span>Tk 0</span></div>
+                        <span>৳ 0</span></div>
                     <hr>
                     <div class="d-flex justify-content-between"><span class="cart__item__title">Total: </span>
-                        <span>Tk '.$price.'</span></div>
+                        <span>৳ '.$price.'</span></div>
                     <div class="my-4">
                         <div class="d-flex justify-content-between"><span class="cart__item__title">Address: </span> <span>'.$user_info["address"]. '</span>
                         </div>
@@ -93,12 +93,4 @@ if (count($cart_products)) {
 }
 ?>
 
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
-        integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
-        crossorigin="anonymous"></script>
-
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.min.js"
-        integrity="sha384-heAjqF+bCxXpCWLa6Zhcp4fu20XoNIA98ecBC1YkdXhszjoejr5y9Q77hIrv8R9i"
-        crossorigin="anonymous"></script>
-</body>
-</html>
+<?php include("footer.php");?>

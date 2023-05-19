@@ -53,8 +53,4 @@ if (count($cart_products) && isset($_POST["place_order"])) {
     <a href="/index.php" class="btn">Go to Home</a>
 </div>
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.min.js"
-        integrity="sha384-heAjqF+bCxXpCWLa6Zhcp4fu20XoNIA98ecBC1YkdXhszjoejr5y9Q77hIrv8R9i"
-        crossorigin="anonymous"></script>
-</body>
-</html>
+<?php include("footer.php");?>

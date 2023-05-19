@@ -24,3 +24,22 @@
     margin: 0px
   }
 }
+
+
+.home-menu{
+  display: flex;
+  justify-content: space-evenly;
+  margin-top:60px;
+  &__item{
+    display: block;
+    box-shadow: 0 0 5px 1px $color-white-light;
+    padding: 50px;
+    text-align: center;
+    color:$color-gray;
+    transition: all 0.3s;
+    &:hover{
+      box-shadow: 0 0 5px 2px $color-secondary;
+
+    }
+  }
+}

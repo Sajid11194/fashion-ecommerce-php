@@ -11,24 +11,40 @@ if (isset($_GET["id"])) {
     }
 }
 if (isset($_POST["product_id"])) {
+    if(isset($_SESSION["user_id"])){
     $product_id = $_POST["product_id"];
-    $color=$_POST["color"];
-    $size=$_POST["size"];
     $quantity=$_POST["quantity"];
-    $cart=array("product_id"=>$product_id,"color"=>$color,"size"=>$size,"quantity"=>$quantity);
-    array_push($_SESSION["cart"], $cart);
+    if(isset($_POST["color"]) && isset($_POST["size"]) && is_numeric($quantity) && $quantity>0){
+        $color=$_POST["color"];
+        $size=$_POST["size"];
+        $cart=array("product_id"=>$product_id,"color"=>$color,"size"=>$size,"quantity"=>$quantity);
+        array_push($_SESSION["cart"], $cart);
+        echo '<div class="container my-5"><div class="alert alert-success alert-dismissible fade show" role="alert">
+  Product added to cart
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div></div>';
+    } else {
+        echo '<div class="container my-5"><div class="alert alert-danger alert-dismissible fade show" role="alert">
+  Enter all info for the product
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div></div>';
+    }
+
+    } else {
+        header("Location: login.php");
+    }
 }
 ?>
 
 <div class="container my-5">
     <div class="row">
         <div class="col-12 col-lg-6">
-            <img class="img-fluid h-100 ms-5" src="./img/<?php echo $product['image']; ?>"/>
+            <img class="img-fluid h-100" src="./img/<?php echo $product['image']; ?>"/>
         </div>
         <div class="col-12 col-lg-6">
             <div class="product">
                 <h2 class="product__heading"><?php echo $product['name']; ?></h2>
-                <p class="product__price">Tk <?php echo $product['price']; ?></p>
+                <p class="product__price">৳ <?php echo $product['price']; ?></p>
                 <p class="product__short-info"><?php echo $product['description']; ?></p>
                 <form action="" method="post">
                     <div class="product__feature">
@@ -66,25 +82,17 @@ if (isset($_POST["product_id"])) {
                 <div class="product__feature">
                     <span class="product__feature__title">Category:</span>
                     <span><?php foreach (unserialize($product['categories']) as $item) {
-                            echo "<a href=\"#$item\">$item</a>, ";
+                            echo "<a href=\"/products.php?category=$item\">$item</a>, ";
                         } ?></span>
                 </div>
                 <div class="my-4">
-                    <a class="btn btn--round"><i class="lni lni-search-alt"></i></a>
-                    <a class="btn btn--round"><i class="lni lni-search-alt"></i></a>
-                    <a class="btn btn--round"><i class="lni lni-search-alt"></i></a>
-                    <a class="btn btn--round"><i class="lni lni-search-alt"></i></a>
+                    <a href="#" class="btn btn--round me-2"><i class="lni lni-facebook-original"></i></a>
+                    <a href="#" class="btn btn--round me-2"><i class="lni lni-google"></i></a>
+                    <a href="#" class="btn btn--round me-2"><i class="lni lni-youtube"></i></a>
+                    <a href="#" class="btn btn--round me-2"><i class="lni lni-discord-alt"></i></a>
                 </div>
             </div>
         </div>
     </div>
 </div>
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
-        integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
-        crossorigin="anonymous"></script>
-
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.min.js"
-        integrity="sha384-heAjqF+bCxXpCWLa6Zhcp4fu20XoNIA98ecBC1YkdXhszjoejr5y9Q77hIrv8R9i"
-        crossorigin="anonymous"></script>
-</body>
-</html>
+<?php include("footer.php");?>

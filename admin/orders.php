@@ -1,17 +1,13 @@
 <?php
 global $con;
 require("header.php");
-if (isset($_SESSION["user_id"])) {
+require("auth-admin.php");
 
-} else {
-    header("Location: login.php");
-}
 ?>
 <div class="container my-5 text-center">
-    <span class="heading-1 mb-5">Your Orders</span>
+    <span class="heading-1 mb-5">All Orders</span>
     <?php
-    $user_info = get_user_info_by_id($_SESSION["user_id"]);
-    $query = $con->prepare("SELECT * FROM `orders`  where user_id='{$_SESSION["user_id"]}'");
+    $query = $con->prepare("SELECT * FROM `orders`  where 1");
     $query->execute();
     $orders = $query->fetchAll();
     if (count($orders)) {
@@ -32,11 +28,11 @@ if (isset($_SESSION["user_id"])) {
 
 
 ';
-                foreach($order_items as $item){
-            echo '
+            foreach($order_items as $item){
+                echo '
             <div class="row cart__item my-2">
                 <div class="d-flex">
-                    <img class="img-fluid cart__item__image float-start" src="./img/' . $item["image"] . '">
+                    <img class="img-fluid cart__item__image float-start" src="../img/' . $item["image"] . '">
                     <div class="cart__item__features flex-grow-1">
                         <a class="cart__item__name" href="product-view.php?id=' . $item["product_id"] . '">' . $item["name"] . '</a>
                         <div class="d-flex justify-content-between mt-5">
@@ -53,11 +49,11 @@ if (isset($_SESSION["user_id"])) {
                 </div>
             </div>
             ';
-        }
-                echo '</div>';
+            }
+            echo '</div>';
         }
     } else {
-        echo '<p class="text-muted">You did not order anything yet</p><a href="index.php" class="btn my-5">Browse Products</a> </div>';
+        echo '<p class="text-muted">No one order anything yet</p><a href="index.php" class="btn my-5">Browse Products</a> </div>';
     }
     ?>
 </div>

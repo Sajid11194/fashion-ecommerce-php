@@ -22,7 +22,7 @@ $products = $query->fetchAll();
 
 ?>
 <div class="container mt-5">
-    <span class="heading-1 text-center my-5 "><?php echo $title; ?></span>
+    <span class="heading-1 text-center my-5 "><?php echo ucfirst($title); ?></span>
     <?php if (!count($products)) {
         echo '<div class="text-center">No Products to Show</div>';
     }
@@ -33,9 +33,9 @@ $products = $query->fetchAll();
         foreach ($products as $product) {
             echo "<div class=\"col\">
             <div class=\"product-list__item text-center\">
-                <a href=\"/product-view.php?id={$product["product_id"]}\"><img class=\"img-fluid product-list__item__img\" src=\"./img/product2.png\" alt=\"\"></a>
+                <a href=\"/product-view.php?id={$product["product_id"]}\"><img class=\"img-fluid product-list__item__img\" src=\"./img/{$product["image"]}\" alt=\"\"></a>
                 <span class=\"product-list__item--name\">{$product["name"]}</span>
-                <span class=\"product-list__item--price\">Tk {$product["price"]}</span>
+                <span class=\"product-list__item--price\">৳ {$product["price"]}</span>
                 <div class=\"\">
                     <a href=\"/product-view.php?id={$product["product_id"]}\" class=\"btn d-block mt-2\">
                         <i class=\"lni lni-cart\"></i>
@@ -50,3 +50,5 @@ $products = $query->fetchAll();
 
     </div>
 </div>
+
+<?php include("footer.php"); ?>

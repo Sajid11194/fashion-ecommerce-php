@@ -10,6 +10,7 @@ if (isset($_POST["username"])) {
   if ($result) {
     $_SESSION["user_id"]=$result["user_id"];
     $_SESSION["cart"]=array();
+    $_SESSION["role"]=$result["role"];
     header("Location: index.php");
   } else {
     $message = '<div class="alert alert-danger alert-dismissible fade show" role="alert">
@@ -33,12 +34,4 @@ if (isset($_POST["username"])) {
     <a class="btn-outline d-block text-center my-4" href="/signup.php">Create an account</a>
   </form>
 </div>
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
-        integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
-        crossorigin="anonymous"></script>
-
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.min.js"
-        integrity="sha384-heAjqF+bCxXpCWLa6Zhcp4fu20XoNIA98ecBC1YkdXhszjoejr5y9Q77hIrv8R9i"
-        crossorigin="anonymous"></script>
-</body>
-</html>
+<?php include("footer.php");?>

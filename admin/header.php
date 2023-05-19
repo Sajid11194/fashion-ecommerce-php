@@ -1,8 +1,16 @@
 <?php
 session_start();
-require("db.php");
-require("functions.php");
+require("../db.php");
+require("../functions.php");
+if(isset($_SESSION["role"])){
+    if($_SESSION["role"]!="admin"){
+        header("Location: /index.php");
+    }
+} else {
+    header("Location: /login.php");
+}
 ?>
+
 
 <!doctype html>
 <html lang="en">
@@ -10,19 +18,19 @@ require("functions.php");
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>RaimentsGlobal</title>
-    <link rel="stylesheet" href="./css/bootstrap.min.css">
-    <link href="css/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link href="../css/style.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Italiana&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Vollkorn+SC:wght@400;600;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.lineicons.com/4.0/lineicons.css"/>
-
+    <link href="https://fonts.googleapis.com/css2?family=Vollkorn+SC:wght@400;600;700;900&display=swap" rel="stylesheet">
 </head>
 <body>
+
 <nav class="nav">
-    <a href="/"><img src="img/logo.png"/></a>
+    <a href="/"><img src="../img/logo.png"/></a>
     <form class="nav__form" action="products.php" method="get">
         <input type="text" class="nav__form__input" id="nav__form__input" name="search" placeholder="Name">
         <button type="submit" class="btn"><i class="lni lni-search-alt"></i></button>
@@ -47,13 +55,18 @@ require("functions.php");
 
 <nav class="nav-secondary">
     <div class="nav-secondary--left">
-        <a class="nav-secondary--item" href="/index.php">
+        <a class="nav-secondary--item dropdown-toggle dropdown" href="/index.php" role="button" data-bs-toggle="dropdown-menu" aria-expanded="false">
             Home
         </a>
-        <a class="nav-secondary--item" href="index.php#categories">Categories</a>
-        <a class="nav-secondary--item" href="index.php#collections">Collections</a>
+        <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">Action</a></li>
+            <li><a class="dropdown-item" href="#">Another action</a></li>
+            <li><a class="dropdown-item" href="#">Something else here</a></li>
+        </ul>
+        <a class="nav-secondary--item" href="#categories">Categories</a>
+        <a class="nav-secondary--item" href="#collections">Collections</a>
     </div>
     <div class="nav-secondary--right">
-        <a class="nav-secondary--item" href="index.php#footer">Contact Us</a>
+        <a class="nav-secondary--item" href="#footer">Contact Us</a>
     </div>
 </nav>

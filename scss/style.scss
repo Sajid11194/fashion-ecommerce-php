@@ -1,8 +1,6 @@
 @import 'variable';
 @import './pages/index';
 @import './pages/product';
-@import './pages/login';
-
 
 
 * {
@@ -11,45 +9,52 @@
   box-sizing: border-box;
 
 }
-a{
+
+a {
   text-decoration: none;
-  color: inherit;
+
 }
+
 body {
   font-family: 'Lato', sans-serif;
 
 }
 
-.heading-1{
+.heading-1 {
   font-size: 32px;
   font-weight: 700;
   display: block;
   font-family: 'Italiana', serif;
 }
 
-.box{
+.box {
   box-shadow: 0 0 10px 5px whitesmoke;
 }
-.heading-small{
+
+.heading-small {
   font-size: 22px;
   font-weight: 700;
   display: block;
 }
+
 .btn {
   background-color: $color-secondary;
   padding: 10px 25px;
   border-radius: 0px;
   color: $color-white;
-  &:hover{
+
+  &:hover {
     background-color: transparent;
-    color:$color-secondary;
+    color: $color-secondary;
     border: 1px solid $color-secondary;
   }
-  &--round{
+
+  &--round {
     border-radius: 50px;
     padding: 5px 10px;
   }
-  &--outline{
+
+  &--outline {
     background-color: $color-white;
     color: black;
     border: 1px solid $color-secondary;
@@ -57,20 +62,23 @@ body {
 }
 
 .btn-outline {
-  background-color:transparent ;
+  background-color: transparent;
   padding: 10px 25px;
   border-radius: 0px;
   color: $color-secondary;
   border: 1px solid $color-secondary;
-  &:hover{
+
+  &:hover {
     background-color: $color-secondary;
-    color:$color-white;
+    color: $color-white;
   }
-  &--round{
+
+  &--round {
     border-radius: 50px;
     padding: 5px 10px;
   }
-  &--outline{
+
+  &--outline {
     background-color: $color-white;
     color: black;
     border: 1px solid $color-secondary;
@@ -125,68 +133,99 @@ body {
       margin: 0px 10px;
       line-height: 1.5rem;
 
-      &__name{
+      & a {
+        color: $color-gray;
+
+        &:hover {
+          color: $color-secondary;
+        }
+      }
+
+      &__name {
         display: block;
       }
     }
   }
 
 }
-.lni{
+
+.lni {
   padding-top: 4px;
 }
-.nav-secondary{
+
+.nav-secondary {
   display: flex;
   justify-content: space-between;
-  padding: 20px 200px;
+  align-items: center;
+  padding: 0px 200px;
   background-color: $color-secondary;
   color: $color-white;
-  &--left{
+
+  &--left {
     display: flex;
     justify-content: start;
   }
-  &--item{
+  &--right {
+    display: flex;
+    justify-content: end;
+  }
+  &--item {
     color: $color-white;
-    margin-right: 10px;
+    padding: 20px 10px;
+    &:hover{
+      background-color: $color-white;
+      color:$color-secondary;
+    }
   }
 }
 
 
-
-.product-list{
-  &__item{
+.product-list {
+  &__item {
     border: 1px solid $color-white-light;
     padding: 5px;
-    &__img{
+
+    &__img {
       width: 100%;
       height: 350px;
       object-fit: cover;
       object-position: top;
       border-radius: 3px;
       transition: all 0.2s;
-      &:hover{
-        transform: scale(1.02);
+
+      &:hover {
+        transform: scale(1.01);
       }
     }
-    &--name{
+
+    &--name {
       font-weight: 600;
       font-size: 1.1rem;
       margin: 2px 0px;
       display: block;
+      color: $color-dark;
+
+      &:hover {
+        color: $color-secondary;
+      }
+
     }
-    &--price{
+
+    &--price {
       margin: 2px 0;
       font-weight: lighter;
       display: block;
     }
-    &__btn{
-      color:$color-white;
+
+    &__btn {
+      color: $color-white;
       text-decoration: none;
       padding: 8px 12px;
       display: block;
       background-color: $color-secondary;
       transition: all 0.2s;
-      &:hover{
+
+      &:hover {
         background-color: $color-gray;
       }
     }
@@ -194,11 +233,10 @@ body {
 }
 
 
-
-.home-cat{
+.home-cat {
   position: relative;
 
-  &__btn{
+  &__btn {
     position: absolute;
     bottom: 5%;
     left: 50%;
@@ -209,8 +247,9 @@ body {
     background-color: $color-secondary;
     color: $color-white;
     transition: all 0.5s;
+    text-align: center;
 
-    &:hover{
+    &:hover {
       background-color: $color-white;
       color: $color-secondary;
       letter-spacing: 2px;
@@ -218,60 +257,128 @@ body {
   }
 }
 
-.cart{
-  &__item{
+.cart {
+  &__item {
     border: 1px solid #e3e2e2;
-    padding: 10px 0px;
-    &__features{
+    padding: 10px 10px;
+    margin-bottom: 10px;
+
+    &__features {
       padding: 0px 15px;
     }
-    &__title{
+
+    &__title {
       color: #3a3939;
       font-weight: 600;
     }
-    &__image{
-      height:150px;
-      width:auto;
+
+    &__image {
+      height: 150px;
+      width: auto;
     }
-    &__name{
+
+    &__name {
       font-size: 24px;
       display: block;
+      color: $color-gray;
+
+      &:hover {
+        color: $color-secondary;
+      }
+
     }
   }
 
-  &__summary{
+  &__summary {
     padding: 5px 15px;
     border: 1px solid #e3e2e2;
 
   }
 
-}.form{
-   box-shadow: 0 0 10px 5px whitesmoke;
-   border-radius: 7px;
-   width: 500px;
-   margin: auto auto;
-   padding: 30px;
-   &__title{
-     margin: 30px 0px;
-   }
-   &__input{
-     width: 100%;
-     border: 1px solid #ccc8c8;
-     margin: 10px 0;
-     padding: 10px 10px;
-   }
-   &__checkbox__label{
-     margin: 0px 5px;
-   }
- }
+}
 
-.order{
-  &__item{
+.form {
+  box-shadow: 0 0 10px 5px whitesmoke;
+  border-radius: 7px;
+  width: 500px;
+  margin: auto auto;
+  padding: 30px;
+
+  &__title {
+    margin: 30px 0px;
+  }
+
+  &__input {
+    width: 100%;
+    border: 1px solid #ccc8c8;
+    margin: 10px 0;
+    padding: 10px 10px;
+  }
+
+  &__checkbox__label {
+    margin: 0px 5px;
+  }
+}
+
+.order {
+  &__item {
     margin: 15px 0px;
     box-shadow: 0 0 10px 5px whitesmoke;
-    &__title{
+
+    &__title {
       color: #3a3939;
       font-weight: 600;
     }
+  }
+}
+
+.footer {
+  background-color: $color-footer;
+  padding: 40px 0px;
+  color: $color-white-light;
+  margin-top: 50px;
+
+  &__item {
+    padding: 10px 30px;
+
+    & a {
+      color: inherit;
+
+      &:hover {
+        color: $color-secondary;
+      }
+    }
+
+    &__title {
+      font-size: 24px;
+      font-weight: 600;
+      color: $color-white;
+    }
+
+    &__body {
+      margin: 20px 0px
+    }
+  }
+}
+
+.footer-mini {
+  background-color: #2c2c2c;
+  padding: 10px 0px;
+  color: $color-white-light;
+
+  & a {
+    color: inherit;
+
+    &:hover {
+      color: $color-secondary;
+    }
+  }
+}
+
+.four-zero-four{
+  text-align: center;
+  &__image{
+    height: 400px;
+    width: auto;
   }
 }
