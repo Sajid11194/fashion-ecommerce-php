@@ -47,7 +47,7 @@ if (count($cart_products)) {
             echo '
             <div class="cart__item">
                 <div class="d-flex">
-                    <img class="img-fluid cart__item__image float-start" src="./img/'.$item["image"].'">
+                    <img class="img-fluid rounded cart__item__image" src="./img/'.$item["image"].'">
                     <div class="cart__item__features flex-grow-1">
                         <div class="d-flex justify-content-between"><a class="cart__item__name" href="product-view.php?id='.$item["product_id"].'">'.$item["name"].'</a>
                         <form action="" method="post"><input type="text" name="remove_product" value="'.$item["product_id"].'" hidden/><button class="cart__item__remove-btn" type="submit"><i class="lni lni-circle-minus"></i></button></form>
