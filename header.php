@@ -22,6 +22,7 @@ require("functions.php");
 </head>
 <body>
 <nav class="nav">
+    <div class="container nav__body">
     <a href="/"><img src="img/logo.png"/></a>
     <form class="nav__form" action="products.php" method="get">
         <input type="text" class="nav__form__input" id="nav__form__input" name="search" placeholder="Name">
@@ -41,11 +42,12 @@ require("functions.php");
                 <span class="nav__menu__item__name">Login</span></a></div>';
         }
         ?>
-
+    </div>
     </div>
 </nav>
 
 <nav class="nav-secondary">
+    <div class="container nav-secondary__body">
     <div class="nav-secondary--left">
         <a class="nav-secondary--item" href="/index.php">
             Home
@@ -55,5 +57,6 @@ require("functions.php");
     </div>
     <div class="nav-secondary--right">
         <a class="nav-secondary--item" href="index.php#footer">Contact Us</a>
+    </div>
     </div>
 </nav>

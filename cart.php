@@ -9,6 +9,16 @@ if (isset($_SESSION["user_id"])) {
 ?>
 
 <?php
+if(isset($_POST["remove_product"])){
+    $product_id=$_POST["remove_product"];
+    $cart_products=[];
+    foreach ($_SESSION["cart"] as $item){
+        if($item["product_id"]!=$product_id){
+            $cart_products[]=$item;
+        }
+    }
+    $_SESSION["cart"]=$cart_products;
+}
 $user_info=get_user_info_by_id($_SESSION["user_id"]);
 $cart_products=$_SESSION["cart"];
 
@@ -25,7 +35,6 @@ for($i=0;$i<count($cart_products);$i++){
     } else {
         $cart_products[$i]["exists"]=false;
     }
-
 }
 }
 
@@ -40,7 +49,9 @@ if (count($cart_products)) {
                 <div class="d-flex">
                     <img class="img-fluid cart__item__image float-start" src="./img/'.$item["image"].'">
                     <div class="cart__item__features flex-grow-1">
-                        <a class="cart__item__name" href="product-view.php?id='.$item["product_id"].'">'.$item["name"].'</a>
+                        <div class="d-flex justify-content-between"><a class="cart__item__name" href="product-view.php?id='.$item["product_id"].'">'.$item["name"].'</a>
+                        <form action="" method="post"><input type="text" name="remove_product" value="'.$item["product_id"].'" hidden/><button class="cart__item__remove-btn" type="submit"><i class="lni lni-circle-minus"></i></button></form>
+                        </div>
                         <div class="d-flex justify-content-between mt-5">
                             <div>
                                 <div class="my-2"><span class="cart__item__title">Color: </span><span>'.$item["color"].'</span></div>
