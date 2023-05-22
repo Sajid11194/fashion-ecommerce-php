@@ -19,10 +19,7 @@ if (isset($_POST["product_id"])) {
         $size=$_POST["size"];
         $cart=array("product_id"=>$product_id,"color"=>$color,"size"=>$size,"quantity"=>$quantity);
         array_push($_SESSION["cart"], $cart);
-        echo '<div class="container my-5"><div class="alert alert-success alert-dismissible fade show" role="alert">
-  Product added to cart
-    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-</div></div>';
+        header("Location: cart.php");
     } else {
         echo '<div class="container my-5"><div class="alert alert-danger alert-dismissible fade show" role="alert">
   Enter all info for the product
