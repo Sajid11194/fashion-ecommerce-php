@@ -45,10 +45,10 @@ $products = get_products();
 <div class="container mt-5" id="collections">
     <span class="heading-1 text-center my-4 ">Latest Collections</span>
 
-    <div class="row row-cols-lg-4 row-cols-1 gy-4">
+    <div class="row gy-4">
         <?php
         foreach ($products as $product) {
-            echo "<div class=\"col\">
+            echo "<div class=\"col-lg-3\">
             <div class=\"product-list__item text-center\">
                 <div><a href=\"/product-view.php?id={$product["product_id"]}\"><img class=\"img-fluid product-list__item__img\" src=\"./img/{$product["image"]}\" alt=\"\"></a></div>
                 <div class=\"mt-3\"><a  href=\"/product-view.php?id={$product["product_id"]}\"><span class=\"product-list__item--name\">{$product["name"]}</span></a></div>
