@@ -1,5 +1,2 @@
 ## todo:
-- Cart
-- Order
-- User Dashboard
-- Admin Dashboard
+- remove item from cart
