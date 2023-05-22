@@ -31,7 +31,7 @@ if(isset($_SESSION["role"])){
 <nav class="nav">
     <div class="container nav__body">
         <a href="/"><img src="../img/logo.png"/></a>
-        <form class="nav__form" action="products.php" method="get">
+        <form class="nav__form" action="/products.php" method="get">
             <input type="text" class="nav__form__input" id="nav__form__input" name="search" placeholder="Name">
             <button type="submit" class="btn"><i class="lni lni-search-alt"></i></button>
         </form>
@@ -59,11 +59,11 @@ if(isset($_SESSION["role"])){
             <a class="nav-secondary--item" href="/index.php">
                 Home
             </a>
-            <a class="nav-secondary--item" href="index.php#categories">Categories</a>
-            <a class="nav-secondary--item" href="index.php#collections">Collections</a>
+            <a class="nav-secondary--item" href="/index.php#categories">Categories</a>
+            <a class="nav-secondary--item" href="/index.php#collections">Collections</a>
         </div>
         <div class="nav-secondary--right">
-            <a class="nav-secondary--item" href="index.php#footer">Contact Us</a>
+            <a class="nav-secondary--item" href="/index.php#footer">Contact Us</a>
         </div>
     </div>
 </nav>
