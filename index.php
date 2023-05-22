@@ -51,7 +51,7 @@ $products = get_products();
             echo "<div class=\"col\">
             <div class=\"product-list__item text-center\">
                 <div><a href=\"/product-view.php?id={$product["product_id"]}\"><img class=\"img-fluid product-list__item__img\" src=\"./img/{$product["image"]}\" alt=\"\"></a></div>
-                <div class=\"mt-3\"><a  href=\"/product-view.php?id={$product["product_id"]}\"><span class=\"product-list__item--name\">{$product["name"]}</span></a></div>
+                <div class=\"mt-5\"><a  href=\"/product-view.php?id={$product["product_id"]}\"><span class=\"product-list__item--name\">{$product["name"]}</span></a></div>
                 <div><span class=\"product-list__item--price\">৳ {$product["price"]}</span></div>
                 <div class=\"\">
                     <a href=\"/product-view.php?id={$product["product_id"]}\" class=\"btn d-block mt-2\">
