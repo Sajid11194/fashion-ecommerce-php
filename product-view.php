@@ -43,7 +43,7 @@ if (isset($_POST["product_id"])) {
                 <h2 class="product__heading"><?php echo $product['name']; ?></h2>
                 <p class="product__price">৳ <?php echo $product['price']; ?></p>
                 <p class="product__short-info"><?php echo $product['description']; ?></p>
-                <form action="" method="post">
+                <form action="" method="post" onsubmit="return validate()">
                     <div class="product__feature">
                         <p class="product__feature__title d-block">Select Color: </p>
                         <?php
@@ -67,7 +67,7 @@ if (isset($_POST["product_id"])) {
                         ?>
                     </div>
                     <div class="d-flex align-items-baseline">
-                        <input type="number" class="form__input product__feature__select-quantity" name="quantity"
+                        <input type="number" class="form__input product__feature__select-quantity" name="quantity" id="quantity"
                                placeholder="Quantity"/>
                         <input type="text" name="product_id" value="<?php echo $product["product_id"] ?>" hidden/>
                         <button class="btn">Add to Cart</button>
@@ -92,4 +92,15 @@ if (isset($_POST["product_id"])) {
         </div>
     </div>
 </div>
+<script>
+    function validate() {
+        let quantity = parseInt(document.getElementById("quantity").value);
+        if (quantity > 0) {
+            return true;
+        } else {
+            alert("Product quantity must be at least 1");
+            return false;
+        }
+    }
+</script>
 <?php include("footer.php");?>

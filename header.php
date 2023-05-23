@@ -9,7 +9,8 @@ require("functions.php");
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>RaimentsGlobal</title>
+    <title>Raiments</title>
+    <link rel="icon" href="./img/favicon.ico">
     <link rel="stylesheet" href="./css/bootstrap.min.css">
     <link href="css/style.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
