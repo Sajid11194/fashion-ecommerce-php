@@ -24,24 +24,13 @@
       max-width:100px;
       margin:0;
     }
-    &__color-select-radio{
-      display:none;
-      &:checked + label{
-        border:2px solid $color-white;
-      }
-    }
+
     &__color-select-label{
       width:35px;
       height:25px;
     }
-    &__size-select-radio{
-      display:none;
-      &:checked + label{
-        border:2px solid $color-secondary;
-      }
-    }
+
     &__size-select-label{
-      border:1px solid $color-gray;
       padding: 5px 10px;
     }
   }

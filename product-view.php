@@ -49,7 +49,7 @@ if (isset($_POST["product_id"])) {
                         <?php
                         foreach (unserialize($product['colors']) as $item) {
                             echo "<span class=\"me-2\">
-                                <input type=\"radio\" name=\"color\" id=\"color-$item\" value=\"$item\" class=\"product__feature__color-select-radio\"/>
+                                <input type=\"radio\" name=\"color\" id=\"color-$item\" value=\"$item\" />
                                  <label for=\"color-$item\" style=\"background-color:$item\" class=\"product__feature__color-select-label\"></label>
                                  </span>";
                         }
@@ -60,7 +60,7 @@ if (isset($_POST["product_id"])) {
                         <?php
                         foreach (unserialize($product['sizes']) as $item) {
                             echo "<span class=\"me-2\">
-                                <input type=\"radio\" name=\"size\" id=\"size-$item\" value=\"$item\" class=\"product__feature__size-select-radio\"/>
+                                <input type=\"radio\" name=\"size\" id=\"size-$item\" value=\"$item\" />
                                  <label for=\"size-$item\" class=\"product__feature__size-select-label\">$item</label>
                                  </span>";
                         }
