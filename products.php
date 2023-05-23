@@ -27,11 +27,11 @@ $products = $query->fetchAll();
         echo '<div class="text-center">No Products to Show</div>';
     }
     ?>
-    <div class="row row-cols-lg-4 row-cols-1 gy-4">
+    <div class="row gy-4">
         <?php
 
         foreach ($products as $product) {
-            echo "<div class=\"col\">
+            echo "<div class=\"col-lg-3\">
             <div class=\"product-list__item text-center\">
                 <a href=\"/product-view.php?id={$product["product_id"]}\"><img class=\"img-fluid product-list__item__img\" src=\"./img/{$product["image"]}\" alt=\"\"></a>
                 <span class=\"product-list__item--name\">{$product["name"]}</span>
