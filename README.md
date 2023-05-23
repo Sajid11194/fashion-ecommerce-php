@@ -1,2 +1,2 @@
 ## todo:
-- remove item from cart
+- remove products (admin)
