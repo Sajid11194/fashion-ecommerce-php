@@ -25,8 +25,8 @@ if (isset($_SESSION["user_id"])) {
             <div class="my-2"><span class="order__item__title">Total Cost: </span><span>' . $order["total_cost"] . '</span></div>
 </div>
 <div>
-            <div class="my-2"><span class="order__item__title">Shipment Status: </span><span>' . $order["payment_status"] . '</span></div>
-            <div class="my-2"><span class="order__item__title">Payment Status: </span><span>' . $order["shipment_status"] . '</span></div>
+            <div class="my-2"><span class="order__item__title">Shipment Status: </span><span>' . $order["shipment_status"] . '</span></div>
+            <div class="my-2"><span class="order__item__title">Payment Status: </span><span>' . $order["payment_status"] . '</span></div>
 </div>
 </div>
 
