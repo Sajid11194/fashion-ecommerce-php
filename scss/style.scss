@@ -88,12 +88,13 @@ body {
 .nav {
   padding: 20px 0px;
 
-  &__body{
+  &__body {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    align-content:space-around;
+    align-content: space-around;
   }
+
   &__form {
     display: flex;
     flex-wrap: wrap;
@@ -128,9 +129,11 @@ body {
     flex-wrap: wrap;
     flex-direction: row;
     text-align: center;
+
     &__item {
       margin: 0px 10px;
       line-height: 1.5rem;
+
       & a {
         color: $color-gray;
 
@@ -154,27 +157,32 @@ body {
 .nav-secondary {
   background-color: $color-secondary;
   color: $color-white;
-  &__body{
+
+  &__body {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
   }
+
   &--left {
     display: flex;
     flex-wrap: wrap;
     justify-content: start;
   }
+
   &--right {
     display: flex;
     flex-wrap: wrap;
     justify-content: end;
   }
+
   &--item {
     color: $color-white;
     padding: 20px 10px;
-    &:hover{
+
+    &:hover {
       background-color: $color-white;
-      color:$color-secondary;
+      color: $color-secondary;
     }
   }
 }
@@ -286,9 +294,11 @@ body {
       }
 
     }
-    &__remove-btn{
+
+    &__remove-btn {
       border: none;
       background-color: transparent;
+
       &:hover {
         color: $color-secondary;
       }
@@ -335,8 +345,18 @@ body {
       color: #3a3939;
       font-weight: 600;
     }
+
+    &__status {
+      &__select {
+        border:0px;
+        &:focus{
+          outline:none;
+        }
+      }
+    }
   }
 }
+
 
 .footer {
   background-color: $color-footer;
@@ -381,9 +401,10 @@ body {
   }
 }
 
-.four-zero-four{
+.four-zero-four {
   text-align: center;
-  &__image{
+
+  &__image {
     height: 400px;
     width: auto;
   }

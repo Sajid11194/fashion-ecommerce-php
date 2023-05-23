@@ -238,6 +238,8 @@ body {
 .product-list__item__img {
   width: 100%;
   height: 350px;
+  object-fit: cover;
+  object-position: top;
   border-radius: 3px;
   transition: all 0.2s;
 }
@@ -355,6 +357,12 @@ body {
 .order__item__title {
   color: #3a3939;
   font-weight: 600;
+}
+.order__item__status__select {
+  border: 0px;
+}
+.order__item__status__select:focus {
+  outline: none;
 }
 
 .footer {
