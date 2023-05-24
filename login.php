@@ -11,7 +11,11 @@ if (isset($_POST["username"])) {
     $_SESSION["user_id"]=$result["user_id"];
     $_SESSION["cart"]=array();
     $_SESSION["role"]=$result["role"];
-    header("Location: index.php");
+    if($result["role"]=="admin"){
+      header("Location: /admin/");
+    } else {
+      header("Location: index.php");
+    }
   } else {
     $message = '<div class="alert alert-danger alert-dismissible fade show" role="alert">
   Username or password invalid
