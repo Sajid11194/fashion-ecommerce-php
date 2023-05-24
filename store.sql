@@ -99,10 +99,8 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`user_id`, `username`, `email`, `password`, `address`, `role`) VALUES
-(1, 'a', 'sajid@gmail.com', 'b', '', 'user'),
-(6, 'admin', 'admin@gmail.com', 'admin', '', 'admin'),
-(7, 'salim', 's@b', 'sakim', '', 'user'),
-(8, 'x', 'y@gmail.com', 'z', 'abc', 'user');
+(1, 'user', 'user@gmail.com', 'user', 'Khagan', 'user'),
+(6, 'admin', 'admin@gmail.com', 'admin', '', 'admin')
 
 --
 -- Indexes for dumped tables
